@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+
+@theme {
+  --spacing-6xl: 75rem;
+  --container-screen-2xl: 83.75rem;
+
+  --shadow-service: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+  --shadow-detail: 0px 20px 80px 0px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  --transition-normal: 300ms;
+
+  --color-primary: #2563eb; /* Royal Blue */
+  --color-primary-dark: #1e40af;
+  --color-secondary: #64748b; /* Slate 500 */
+  --color-midnight-text: #0f172a; /* Slate 900 */
+  --color-grey: #94a3b8; /* Slate 400 */
+  --color-border: #e2e8f0; /* Slate 200 */
+  --color-success: #10b981; /* Emerald 500 */
+  --color-section: #f8fafc; /* Slate 50 */
+  --color-surface: #ffffff;
+  
+  --color-dark-bg: #0f172a;
+  --color-dark-surface: #1e293b;
+  --color-dark-border: #334155;
+  --color-dark-text: #f1f5f9;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border, currentColor);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: white;
+    color: var(--color-midnight-text);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dark body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    color: white;
+    background-color: var(--color-primary);
+    transition: background-color 300ms;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+  }
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-primary);
+  }
+}
+
+/* Slick Slider Customization */
+.slick-slide {
+  outline: none;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: var(--color-primary) !important;
+}
+
+.slick-dots li button:before {
+  color: #d1d5db !important; /* gray-300 */
+  opacity: 1 !important;
+}

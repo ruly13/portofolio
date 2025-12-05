@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+build
+dist
+.env
+.env.local
+.DS_Store
+.vscode
+.idea
+package/node_modules
+package/.next
+package/out
+package/build
+package/dist
+package/.env
+package/.env.local
