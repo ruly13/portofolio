@@ -2,12 +2,10 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { useEdit } from '@/app/api/contex/EditContext'
 import { resumeData } from '@/services/mockData'
 import { Icon } from '@iconify/react'
 
 const Hero = () => {
-  const { isEditing } = useEdit()
   const [imageUrl, setImageUrl] = useState(resumeData.hero.image)
 
   return (
@@ -24,13 +22,13 @@ const Hero = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light font-medium text-sm mb-2">
               Available for Hire
             </div>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-midnight-text dark:text-white tracking-tight' contentEditable={isEditing} suppressContentEditableWarning>
+            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-midnight-text dark:text-white tracking-tight'>
               {resumeData.hero.name}
             </h1>
-            <h2 className='text-2xl md:text-3xl text-secondary dark:text-slate-400 font-medium' contentEditable={isEditing} suppressContentEditableWarning>
+            <h2 className='text-2xl md:text-3xl text-secondary dark:text-slate-400 font-medium'>
               {resumeData.hero.title}
             </h2>
-            <p className='text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0' contentEditable={isEditing} suppressContentEditableWarning>
+            <p className='text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0'>
               {resumeData.hero.description}
             </p>
             
@@ -77,21 +75,6 @@ const Hero = () => {
           {/* Image Content */}
           <div className='flex-1 relative'>
             <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
-              {isEditing && (
-                <div className='absolute -top-12 left-0 right-0 bg-white/90 dark:bg-slate-800/90 p-3 rounded-lg shadow-lg z-30 border border-slate-200 dark:border-slate-700'>
-                  <label className="text-xs font-semibold text-slate-500 uppercase mb-1 block">
-                    Profile Image URL
-                  </label>
-                  <input
-                    type="text"
-                    value={imageUrl}
-                    onChange={(e) => setImageUrl(e.target.value)}
-                    className='w-full p-2 border border-slate-300 dark:border-slate-600 rounded text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none dark:bg-slate-700 dark:text-white'
-                    placeholder="https://..."
-                  />
-                </div>
-              )}
-              
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-[2rem] rotate-6 opacity-20 blur-lg"></div>
               <div className="absolute inset-0 bg-white dark:bg-slate-800 rounded-[2rem] shadow-2xl overflow-hidden border-4 border-white dark:border-slate-700 transform transition-transform hover:scale-[1.02] duration-500">
                 <Image

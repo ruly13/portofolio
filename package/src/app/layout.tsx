@@ -6,7 +6,6 @@ import NextTopLoader from 'nextjs-toploader';
 import TopBar from "@/components/TopBar";
 import Container from "@/components/SharedComponent/Container";
 import ToasterContext from './api/contex/ToasetContex'
-import { EditProvider } from './api/contex/EditContext'
 import DownloadPDF from "@/components/DownloadPDF";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -27,7 +26,6 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         <NextTopLoader />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <EditProvider>
             <Aoscompo>
               <TopBar />
               <Container>
@@ -35,7 +33,6 @@ export default function RootLayout({
               </Container>
             </Aoscompo>
             <ToasterContext />
-          </EditProvider>
           <DownloadPDF />
         </ThemeProvider>
       </body>

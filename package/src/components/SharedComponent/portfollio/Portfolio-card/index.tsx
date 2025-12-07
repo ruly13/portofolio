@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { portfolioinfo } from '@/app/api/data'
 import Link from 'next/link'
-import { useEdit } from '@/app/api/contex/EditContext'
 import { Icon } from '@iconify/react'
 
 interface PortfolioItem {
@@ -17,16 +16,6 @@ interface PortfolioItem {
 
 const PortfolioCard = ({ data }: { data?: PortfolioItem[] }) => {
   const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[]>(data || portfolioinfo)
-  const { isEditing } = useEdit()
-
-  const handleEdit = (index: number, field: keyof PortfolioItem, value: string) => {
-    const newItems = [...portfolioItems]
-    newItems[index] = {
-      ...newItems[index],
-      [field]: value
-    }
-    setPortfolioItems(newItems)
-  }
 
   return (
     <div id='portfolio'>
@@ -52,53 +41,10 @@ const PortfolioCard = ({ data }: { data?: PortfolioItem[] }) => {
                   </span>
                 </div>
               </Link>
-              
-              {isEditing && (
-                <div className='absolute top-2 right-2 left-2 bg-white/95 dark:bg-slate-800/95 p-3 rounded-lg shadow-lg z-20'>
-                  <label className="text-xs font-semibold text-slate-500 uppercase mb-1 block">Image URL</label>
-                  <input
-                    type="text"
-                    value={item.image}
-                    onChange={(e) => handleEdit(index, 'image', e.target.value)}
-                    className='w-full p-1.5 border border-slate-300 dark:border-slate-600 rounded text-sm dark:bg-slate-700 dark:text-white'
-                  />
-                </div>
-              )}
             </div>
 
             {/* Content Container */}
             <div className="p-6 flex-1 flex flex-col">
-              {isEditing ? (
-                <div className='space-y-3'>
-                  <div>
-                    <label className="text-xs font-semibold text-slate-500 uppercase mb-1 block">Title</label>
-                    <input
-                      type="text"
-                      value={item.title}
-                      onChange={(e) => handleEdit(index, 'title', e.target.value)}
-                      className='w-full p-1.5 border border-slate-300 dark:border-slate-600 rounded text-sm dark:bg-slate-700 dark:text-white'
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs font-semibold text-slate-500 uppercase mb-1 block">Description</label>
-                    <input
-                      type="text"
-                      value={item.info}
-                      onChange={(e) => handleEdit(index, 'info', e.target.value)}
-                      className='w-full p-1.5 border border-slate-300 dark:border-slate-600 rounded text-sm dark:bg-slate-700 dark:text-white'
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs font-semibold text-slate-500 uppercase mb-1 block">Link</label>
-                    <input
-                      type="text"
-                      value={item.slug}
-                      onChange={(e) => handleEdit(index, 'slug', e.target.value)}
-                      className='w-full p-1.5 border border-slate-300 dark:border-slate-600 rounded text-sm dark:bg-slate-700 dark:text-white'
-                    />
-                  </div>
-                </div>
-              ) : (
                 <>
                   <Link 
                     href={`/portfolio/${item.slug}`}
@@ -120,7 +66,6 @@ const PortfolioCard = ({ data }: { data?: PortfolioItem[] }) => {
                     </Link>
                   </div>
                 </>
-              )}
             </div>
           </div>
         ))}

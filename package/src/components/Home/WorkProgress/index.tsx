@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import { Progress as ProgressData } from '@/app/api/data'
 import { toast } from 'react-hot-toast'
-import { useEdit } from '@/app/api/contex/EditContext'
 
 // Define the interface for ProgressItem
 interface ProgressItem {
@@ -12,20 +11,10 @@ interface ProgressItem {
 
 const WorkProgress = ({ isColorMode }: { isColorMode: Boolean }) => {
   const [progressValues, setProgressValues] = useState<ProgressItem[]>([])
-  const { isEditing } = useEdit()
 
   useEffect(() => {
     setProgressValues(ProgressData)
   }, [])
-
-  const handleEdit = (index: number, field: keyof ProgressItem, value: string | number) => {
-    const newValues = [...progressValues]
-    newValues[index] = {
-      ...newValues[index],
-      [field]: field === 'Progress' ? Number(value) : value
-    }
-    setProgressValues(newValues)
-  }
 
   return (
     <section className='section-padding bg-white dark:bg-slate-900'>
@@ -42,30 +31,10 @@ const WorkProgress = ({ isColorMode }: { isColorMode: Boolean }) => {
             <div key={index} className='bg-slate-50 dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow duration-300'>
               <div className='flex justify-between items-end mb-2'>
                 <div className='font-semibold text-midnight-text dark:text-white text-lg'>
-                  {isEditing ? (
-                    <input
-                      type="text"
-                      value={item.title}
-                      onChange={(e) => handleEdit(index, 'title', e.target.value)}
-                      className='w-full p-1 border rounded bg-white dark:bg-slate-700 dark:text-white dark:border-slate-600'
-                    />
-                  ) : (
-                    item.title
-                  )}
+                  {item.title}
                 </div>
                 <div className='text-primary dark:text-blue-400 font-bold'>
-                  {isEditing ? (
-                    <input
-                      type="number"
-                      value={item.Progress}
-                      onChange={(e) => handleEdit(index, 'Progress', e.target.value)}
-                      min="0"
-                      max="100"
-                      className='w-16 p-1 border rounded bg-white dark:bg-slate-700 dark:text-white dark:border-slate-600 text-right'
-                    />
-                  ) : (
-                    `${item.Progress}%`
-                  )}
+                  {`${item.Progress}%`}
                 </div>
               </div>
               

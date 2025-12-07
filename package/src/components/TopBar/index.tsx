@@ -1,13 +1,11 @@
 'use client'
 
 import Logo from "../Home/Hero/Logo"
-import { useEdit } from "@/app/api/contex/EditContext"
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { Icon } from '@iconify/react'
 
 const TopBar = () => {
-    const { isEditing, setIsEditing } = useEdit();
     const { theme, setTheme } = useTheme();
     const [scrolled, setScrolled] = useState(false);
     const [mounted, setMounted] = useState(false);
@@ -41,12 +39,6 @@ const TopBar = () => {
                             ) : (
                                 <Icon icon="heroicons:moon" width="20" />
                             )}
-                        </button>
-                        <button 
-                            onClick={() => setIsEditing(!isEditing)}
-                            className="px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary-dark transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-                        >
-                            {isEditing ? 'Save Changes' : 'Edit Mode'}
                         </button>
                     </div>
                 </div>
