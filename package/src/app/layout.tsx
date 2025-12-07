@@ -13,8 +13,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Alex Morgan | Senior Full Stack Developer',
-  description: 'Professional portfolio and CV of Alex Morgan',
+  title: 'Rohmat Choiruly Anwar | Full Stack Developer',
+  description: 'Professional portfolio and CV of Rohmat Choiruly Anwar',
 }
 
 export default function RootLayout({

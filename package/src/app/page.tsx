@@ -8,8 +8,8 @@ import Portfolio from '@/components/SharedComponent/portfollio'
 import Certificates from '@/components/Home/Certificates';
 
 export const metadata: Metadata = {
-  title: "Alex Morgan | Senior Full Stack Developer",
-  description: "Professional portfolio and CV of Alex Morgan, a Senior Full Stack Developer specializing in React, Next.js, and modern web technologies.",
+  title: "Rohmat Choiruly Anwar | Full Stack Developer",
+  description: "Professional portfolio and CV of Rohmat Choiruly Anwar, a Full Stack Developer specializing in React, Next.js, and modern web technologies.",
 };
 
 export default function Home() {
