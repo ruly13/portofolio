@@ -3,7 +3,7 @@ export const resumeData = {
     name: "Rohmat choiruly anwar",
     title: "Developer",
     description: "Passionate developer with <1 years of experience in building scalable web applications. Dedicated to writing clean, efficient code and solving complex problems.",
-    image: "/images/hero/hero-image.png",
+    image: "/images/foto/1.jpg",
     contact: {
       phone: "+6285335660159",
       email: "rohmatchoirulyanwar@gmail.com",
@@ -13,10 +13,10 @@ export const resumeData = {
   experience: [
     {
       id: 1,
-      role: "Developer",
-      company: "MUAT.",
-      period: "Project Based (2 month)",
-      description: "Sub division of Frontend muat2"
+      role: "Internship Web Fullstack Developer",
+      company: "PT ELECOMP INDONESIA.",
+      period: "6 Bulan",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
     },
     {
       id: 2,
@@ -109,6 +109,44 @@ export const resumeData = {
       liveUrl: "#",
       githubUrl: "#"
     },
+  ],
+  certificates: [
+    {
+      id: 1,
+      image: '/images/portfolio/cozycasa.png',
+      alt: 'React Certificate',
+      title: 'Advanced React Patterns',
+      slug: 'react-certificate',
+      info: 'Certificate for completing advanced React patterns course.',
+      description: '',
+      technologies: [],
+      liveUrl: "",
+      githubUrl: ""
+    },
+    {
+      id: 2,
+      image: '/images/portfolio/humans.png',
+      alt: 'AWS Certificate',
+      title: 'AWS Certified Solutions Architect',
+      slug: 'aws-certificate',
+      info: 'Professional certification for AWS architecture.',
+      description: '',
+      technologies: [],
+      liveUrl: "",
+      githubUrl: ""
+    },
+    {
+      id: 3,
+      image: '/images/portfolio/roket-squred.png',
+      alt: 'TypeScript Certificate',
+      title: 'TypeScript Mastery',
+      slug: 'typescript-certificate',
+      info: 'Master class for TypeScript development.',
+      description: '',
+      technologies: [],
+      liveUrl: "",
+      githubUrl: ""
+    }
   ]
 };
 

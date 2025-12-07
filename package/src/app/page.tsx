@@ -5,6 +5,7 @@ import Education from '@/components/Home/Education';
 import WorkProgress from '@/components/Home/WorkProgress';
 import Experience from '@/components/Home/Experience';
 import Portfolio from '@/components/SharedComponent/portfollio'
+import Certificates from '@/components/Home/Certificates';
 
 export const metadata: Metadata = {
   title: "Alex Morgan | Senior Full Stack Developer",
@@ -18,6 +19,7 @@ export default function Home() {
       <Experience />
       <WorkProgress isColorMode={false} />
       <Education />
+      <Certificates />
       <Portfolio />
     </main>
   )

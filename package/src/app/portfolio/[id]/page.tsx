@@ -12,7 +12,8 @@ const PortfolioDetail = () => {
   const params = useParams()
   const slug = params.id as string
   
-  const project = resumeData.portfolio.find(item => item.slug === slug)
+  const project = resumeData.portfolio.find(item => item.slug === slug) || 
+                  resumeData.certificates?.find(item => item.slug === slug)
 
   if (!project) {
     return (
