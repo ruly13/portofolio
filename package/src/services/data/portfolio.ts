@@ -71,7 +71,7 @@ export const portfolioDataEn: PortfolioItem[] = [
 export const portfolioDataId: PortfolioItem[] = [
   {
     id: 1,
-    image: '/images/portfolio/cozycasa.png',
+    image: '/images/portfolio/heatwafe.png',
     alt: 'Proyek 1',
     title: 'HeatWafe-Project',
     slug: 'heatwafe-project',

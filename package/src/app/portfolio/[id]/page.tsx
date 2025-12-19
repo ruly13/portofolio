@@ -27,7 +27,16 @@ const PortfolioDetail = () => {
     )
   }
 
-  const htmlContent = marked.parse(project.description || '')
+  // Helper to strip indentation from template literals
+  const stripIndent = (str: string) => {
+    const match = str.match(/^[ \t]*(?=\S)/gm);
+    if (!match) return str;
+    const indent = Math.min(...match.map(x => x.length));
+    const re = new RegExp(`^[ \\t]{${indent}}`, 'gm');
+    return str.replace(re, '');
+  }
+
+  const htmlContent = marked.parse(stripIndent(project.description || ''))
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pt-24 pb-16">
@@ -40,7 +49,7 @@ const PortfolioDetail = () => {
         </Link>
 
         {/* Header Section */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 mb-8">
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-card dark:shadow-none border border-slate-100 dark:border-slate-700 mb-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-midnight-text dark:text-white mb-4">
@@ -96,11 +105,19 @@ const PortfolioDetail = () => {
         </div>
 
         {/* Content Section */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700">
-          <div 
-            className="prose prose-slate dark:prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: htmlContent as string }}
-          />
+        <div className="relative group">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 to-purple-600/30 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative bg-white dark:bg-slate-800 rounded-xl p-8 md:p-10 shadow-card dark:shadow-none border border-slate-100 dark:border-slate-700">
+            <div 
+              className="prose prose-lg prose-slate dark:prose-invert max-w-none 
+                prose-headings:font-bold prose-headings:text-midnight-text dark:prose-headings:text-white
+                prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-primary dark:prose-h2:text-blue-400
+                prose-p:leading-relaxed prose-p:text-slate-600 dark:prose-p:text-slate-300
+                prose-li:text-slate-600 dark:prose-li:text-slate-300
+                prose-strong:text-midnight-text dark:prose-strong:text-white prose-strong:font-bold"
+              dangerouslySetInnerHTML={{ __html: htmlContent as string }}
+            />
+          </div>
         </div>
 
       </div>
