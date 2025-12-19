@@ -3,7 +3,7 @@ import { CertificateItem } from "@/types/resume";
 export const certificatesDataEn: CertificateItem[] = [
   {
     id: 1,
-    image: '/images/portfolio/cozycasa.png',
+    image: '/images/portfolio/1.jpg',
     alt: 'React Certificate',
     title: 'Advanced React Patterns',
     slug: 'react-certificate',
@@ -15,7 +15,7 @@ export const certificatesDataEn: CertificateItem[] = [
   },
   {
     id: 2,
-    image: '/images/portfolio/humans.png',
+    image: '/images/portfolio/2.jpg',
     alt: 'AWS Certificate',
     title: 'AWS Certified Solutions Architect',
     slug: 'aws-certificate',
@@ -27,7 +27,7 @@ export const certificatesDataEn: CertificateItem[] = [
   },
   {
     id: 3,
-    image: '/images/portfolio/roket-squred.png',
+    image: '/images/portfolio/3.jpg',
     alt: 'TypeScript Certificate',
     title: 'TypeScript Mastery',
     slug: 'typescript-certificate',
@@ -42,7 +42,7 @@ export const certificatesDataEn: CertificateItem[] = [
 export const certificatesDataId: CertificateItem[] = [
   {
     id: 1,
-    image: '/images/portfolio/cozycasa.png',
+    image: '/images/portfolio/1.jpg',
     alt: 'Sertifikat React',
     title: 'Pola React Lanjutan',
     slug: 'react-certificate',
