@@ -1,21 +1,15 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { portfolioinfo } from '@/app/api/data'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 
-interface PortfolioItem {
-  image: string
-  alt: string
-  title: string
-  info: string
-  slug: string
-  pdf?: string
-}
+import { PortfolioItem } from '@/types/resume'
 
 const PortfolioCard = ({ data }: { data?: PortfolioItem[] }) => {
-  const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[]>(data || portfolioinfo)
+  const portfolioItems = data || portfolioinfo
+
 
   return (
     <div id='portfolio'>

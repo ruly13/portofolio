@@ -9,6 +9,7 @@ import Container from "@/components/SharedComponent/Container";
 import ToasterContext from './api/contex/ToasetContex'
 import DownloadPDF from "@/components/DownloadPDF";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,17 +27,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <NextTopLoader />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Aoscompo>
-              <TopBar />
-              <Container>
-                {children}
-              </Container>
-            </Aoscompo>
-            <ToasterContext />
-          <DownloadPDF />
-          <SpeedInsights />
-        </ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <Aoscompo>
+                <TopBar />
+                <Container>
+                  {children}
+                </Container>
+              </Aoscompo>
+              <ToasterContext />
+            <DownloadPDF />
+            <SpeedInsights />
+          </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

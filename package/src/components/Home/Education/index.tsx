@@ -1,10 +1,11 @@
 'use client'
 
 import { useRef } from 'react'
-import { resumeData } from '@/services/mockData'
+import { useResumeData } from '@/hooks/useResumeData'
 import { Icon } from '@iconify/react';
 
 const Education = () => {
+    const resumeData = useResumeData();
     const resumeRef = useRef<HTMLDivElement>(null)
 
     return (
@@ -12,7 +13,7 @@ const Education = () => {
             <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className="text-center mb-16">
                     <h2 className='text-3xl md:text-4xl font-bold text-midnight-text dark:text-white mb-4'>
-                        Education
+                        {resumeData.labels.education.title}
                     </h2>
                     <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
                 </div>

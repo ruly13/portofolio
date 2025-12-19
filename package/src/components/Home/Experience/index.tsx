@@ -1,16 +1,17 @@
 'use client'
 
 import React from 'react'
-import { resumeData } from '@/services/mockData'
+import { useResumeData } from '@/hooks/useResumeData'
 import { Icon } from '@iconify/react';
 
 const Experience = () => {
+  const resumeData = useResumeData();
   return (
     <section className='section-padding bg-white dark:bg-slate-900'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className="text-center mb-16">
           <h2 className='text-3xl md:text-4xl font-bold text-midnight-text dark:text-white mb-4'>
-            Work Experience
+            {resumeData.labels.experience.title}
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
         </div>

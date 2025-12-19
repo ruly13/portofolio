@@ -1,12 +1,13 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import { resumeData } from '@/services/mockData'
+import { useResumeData } from '@/hooks/useResumeData'
 import { Icon } from '@iconify/react'
 
 const Hero = () => {
-  const [imageUrl, setImageUrl] = useState(resumeData.hero.image)
+  const resumeData = useResumeData();
+  const imageUrl = resumeData.hero.image;
 
   return (
     <section className='relative bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-20 lg:py-32 overflow-hidden'>
@@ -20,7 +21,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className='flex-1 text-center lg:text-left space-y-6'>
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light font-medium text-sm mb-2">
-              Available for Hire
+              {resumeData.labels.hero.status}
             </div>
             <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-midnight-text dark:text-white tracking-tight'>
               {resumeData.hero.name}
@@ -34,10 +35,10 @@ const Hero = () => {
             
             <div className='flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4'>
               <a href={`mailto:${resumeData.hero.contact.email}`} className="btn-primary rounded-full px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all">
-                Contact Me
+                {resumeData.labels.hero.contact}
               </a>
               <button className="px-8 py-3 rounded-full border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-                Download CV
+                {resumeData.labels.hero.download}
               </button>
             </div>
 
@@ -47,7 +48,7 @@ const Hero = () => {
                   <Icon icon="heroicons:phone" width="20" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold tracking-wider">Phone</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold tracking-wider">{resumeData.labels.hero.phone}</p>
                   <p className="text-sm font-medium text-slate-900 dark:text-slate-100">{resumeData.hero.contact.phone}</p>
                 </div>
               </div>
@@ -56,7 +57,7 @@ const Hero = () => {
                   <Icon icon="heroicons:envelope" width="20" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold tracking-wider">Email</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold tracking-wider">{resumeData.labels.hero.email}</p>
                   <p className="text-sm font-medium text-slate-900 dark:text-slate-100 break-all">{resumeData.hero.contact.email}</p>
                 </div>
               </div>
@@ -65,7 +66,7 @@ const Hero = () => {
                   <Icon icon="heroicons:map-pin" width="20" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold tracking-wider">Location</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold tracking-wider">{resumeData.labels.hero.location}</p>
                   <p className="text-sm font-medium text-slate-900 dark:text-slate-100">{resumeData.hero.contact.location}</p>
                 </div>
               </div>
@@ -92,8 +93,8 @@ const Hero = () => {
                   <Icon icon="heroicons:check-badge" width="24" />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Experience</p>
-                  <p className="text-lg font-bold text-slate-900 dark:text-white">5+ Years</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{resumeData.labels.hero.experience}</p>
+                  <p className="text-lg font-bold text-slate-900 dark:text-white">5+ {resumeData.labels.hero.years}</p>
                 </div>
               </div>
             </div>

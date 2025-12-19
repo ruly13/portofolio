@@ -4,13 +4,14 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import { resumeData } from '@/services/mockData'
+import { useResumeData } from '@/hooks/useResumeData'
 import { Icon } from '@iconify/react'
 import { marked } from 'marked'
 
 const PortfolioDetail = () => {
   const params = useParams()
   const slug = params.id as string
+  const resumeData = useResumeData();
   
   const project = resumeData.portfolio.find(item => item.slug === slug) || 
                   resumeData.certificates?.find(item => item.slug === slug)
