@@ -1,11 +1,13 @@
 import React from 'react'
 import { Metadata } from "next";
 import Hero from '@/components/Home/Hero';
-import Education from '@/components/Home/Education';
-import WorkProgress from '@/components/Home/WorkProgress';
-import Experience from '@/components/Home/Experience';
-import Portfolio from '@/components/SharedComponent/portfollio'
-import Certificates from '@/components/Home/Certificates';
+import dynamic from 'next/dynamic';
+
+const Education = dynamic(() => import('@/components/Home/Education'));
+const WorkProgress = dynamic(() => import('@/components/Home/WorkProgress'));
+const Experience = dynamic(() => import('@/components/Home/Experience'));
+const Portfolio = dynamic(() => import('@/components/SharedComponent/portfollio'));
+const Certificates = dynamic(() => import('@/components/Home/Certificates'));
 
 export const metadata: Metadata = {
   title: "Rohmat Choiruly Anwar | Full Stack Developer",
