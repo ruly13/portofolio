@@ -112,8 +112,8 @@ const PortfolioDetail = () => {
               className="prose prose-lg prose-slate dark:prose-invert max-w-none 
                 prose-headings:font-bold prose-headings:text-midnight-text dark:prose-headings:text-white
                 prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-primary dark:prose-h2:text-blue-400
-                prose-p:leading-relaxed prose-p:text-slate-600 dark:prose-p:text-slate-300
-                prose-li:text-slate-600 dark:prose-li:text-slate-300
+                prose-p:leading-relaxed prose-p:text-slate-600 dark:prose-p:text-white
+                prose-li:text-slate-600 dark:prose-li:text-white
                 prose-strong:text-midnight-text dark:prose-strong:text-white prose-strong:font-bold"
               dangerouslySetInnerHTML={{ __html: htmlContent as string }}
             />
