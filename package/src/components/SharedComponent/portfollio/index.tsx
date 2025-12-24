@@ -6,7 +6,7 @@ import { useResumeData } from '@/hooks/useResumeData'
 const Portfolio = () => {
   const resumeData = useResumeData();
   return (
-    <section className='section-padding bg-white dark:bg-slate-900'>
+    <section id='portfolio' className='section-padding bg-white dark:bg-slate-900 transition-colors duration-300'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className="text-center mb-16">
           <h2 className='text-3xl md:text-4xl font-bold text-midnight-text dark:text-white mb-4'>

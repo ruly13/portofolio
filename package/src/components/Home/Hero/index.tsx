@@ -10,7 +10,7 @@ const Hero = () => {
   const imageUrl = resumeData.hero.image;
 
   return (
-    <section className='relative bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-20 lg:py-32 overflow-hidden'>
+    <section id='home' className='relative bg-gradient-to-br from-slate-50 to-slate-100 dark:bg-slate-900 dark:from-slate-900 dark:to-slate-800 py-20 lg:py-32 overflow-hidden transition-colors duration-300'>
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/5 dark:bg-primary/10 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-400/10 dark:bg-blue-400/5 blur-3xl"></div>

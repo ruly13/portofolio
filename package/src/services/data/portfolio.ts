@@ -3,36 +3,24 @@ import { PortfolioItem } from "@/types/resume";
 export const portfolioDataEn: PortfolioItem[] = [
   {
     id: 1,
-    image: '/images/portfolio/heatwafe.png',
-    alt: 'Project 1',
-    title: 'HeatWafe-Project',
-    slug: 'heatwafe-project',
-    info: 'A full-featured online store built with Next.js and Stripe.',
-    description: `
-      ## Overview
-      This project is a comprehensive e-commerce solution designed to provide a seamless shopping experience. It features a modern, responsive user interface, secure payment processing, and a robust admin dashboard for inventory management.
-
-      ## Key Features
-      - **User Authentication**: Secure login and registration using NextAuth.js.
-      - **Product Catalog**: Dynamic product listing with filtering and search capabilities.
-      - **Shopping Cart**: Real-time cart management with persistent state.
-      - **Payment Gateway**: Integrated Stripe for secure credit card transactions.
-      - **Order Tracking**: Users can view their order history and status.
-
-      ## Challenges & Solutions
-      One of the main challenges was handling real-time inventory updates. I implemented a webhook system with Stripe and a custom database trigger to ensure stock levels are always accurate.
-    `,
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Stripe"],
+    image: "/images/portfolio/heatwafe.png",
+    alt: "Project 1",
+    title: "HeatWafe-Project",
+    slug: "heatwafe-project",
+    info: "IoT-Based Rhizome Drying System",
+    description: `Designed and built a functional smart drying oven for herbal medicine raw materials to facilitate the drying process.
+    Designed and built hardware and software, such as an Android application for monitoring and control based on Kotlin and Firebase, to visualize temperature data in real-time and provide remote control to the user. Implemented automatic control logic on the device to maintain a stable temperature according to the set-point, which successfully reduced the potential for drying failure.`,
+    technologies: ["Kotlin", "Firebase", "Android-studio"],
     liveUrl: "https://google.com",
-    githubUrl: "https://github.com"
+    githubUrl: "https://github.com/ruly13/heatwafe_v1.1",
   },
   {
     id: 2,
-    image: '/images/portfolio/humans.png',
-    alt: 'Project 2',
-    title: 'Social Media Dashboard',
-    slug: 'social-media-dashboard',
-    info: 'Analytics dashboard for tracking social media performance.',
+    image: "/images/portfolio/guestbook-pro.svg",
+    alt: "Project 2",
+    title: "Digital Event Guestbook",
+    slug: "digital-event-guestbook",
+    info: "A digital guest recording system for events to simplify data collection.",
     description: `
       ## Overview
       A centralized dashboard for social media managers to track key performance metrics across multiple platforms.
@@ -44,15 +32,15 @@ export const portfolioDataEn: PortfolioItem[] = [
     `,
     technologies: ["React", "Redux", "Recharts", "Node.js"],
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/ruly13/guestbook-management-V1",
   },
   {
     id: 3,
-    image: '/images/portfolio/roket-squred.png',
-    alt: 'Project 3',
-    title: 'Task Management App',
-    slug: 'task-management-app',
-    info: 'Productivity tool for teams to manage tasks and projects.',
+    image: "/images/portfolio/roket-squred.png",
+    alt: "Project 3",
+    title: "Task Management App",
+    slug: "task-management-app",
+    info: "Productivity tool for teams to manage tasks and projects.",
     description: `
       ## Overview
       A collaborative task management tool inspired by Trello and Asana, designed to improve team productivity.
@@ -64,43 +52,36 @@ export const portfolioDataEn: PortfolioItem[] = [
     `,
     technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
     liveUrl: "#",
-    githubUrl: "#"
-  }
+    githubUrl: "#",
+  },
 ];
 
 export const portfolioDataId: PortfolioItem[] = [
   {
     id: 1,
-    image: '/images/portfolio/heatwafe.png',
-    alt: 'Proyek 1',
-    title: 'HeatWafe-Project',
-    slug: 'heatwafe-project',
-    info: 'Toko online lengkap yang dibangun dengan Next.js dan Stripe.',
-    description: `
-      ## Ikhtisar
-      Proyek ini adalah solusi e-commerce komprehensif yang dirancang untuk memberikan pengalaman berbelanja yang mulus. Ini menampilkan antarmuka pengguna responsif modern, pemrosesan pembayaran yang aman, dan dasbor admin yang kuat untuk manajemen inventaris.
-
-      ## Fitur Utama
-      - **Otentikasi Pengguna**: Login dan pendaftaran aman menggunakan NextAuth.js.
-      - **Katalog Produk**: Daftar produk dinamis dengan kemampuan filter dan pencarian.
-      - **Keranjang Belanja**: Manajemen keranjang waktu nyata dengan state persisten.
-      - **Gerbang Pembayaran**: Stripe terintegrasi untuk transaksi kartu kredit yang aman.
-      - **Pelacakan Pesanan**: Pengguna dapat melihat riwayat dan status pesanan mereka.
-
-      ## Tantangan & Solusi
-      Salah satu tantangan utama adalah menangani pembaruan inventaris waktu nyata. Saya menerapkan sistem webhook dengan Stripe dan pemicu basis data khusus untuk memastikan tingkat stok selalu akurat.
-    `,
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Stripe"],
+    image: "/images/portfolio/heatwafe.png",
+    alt: "Proyek 1",
+    title: "HeatWafe-Project",
+    slug: "heatwafe-project",
+    info: "Sistem Pengering Rimpang Berbasis IoT",
+    description: `Merancang dan membangun fungsional sebuah oven pengering pintar untuk bahan baku obat herbal guna
+memudahkan pengeringan.
+Merancang dan membangun perangkat keras dan perangkat lunak seperti aplikasi android untuk
+monitoring dan kontrol berbasis kotlin dan firebase untuk visualisasi data suhu secara real-time dan
+memberikan kontrol jarak jauh kepada pengguna. Mengimplementasikan logika kontrol otomatis
+pada perangkat untuk menjaga suhu stabil sesuai set-point, yang berhasil mengurangi potensi
+kegagalan pengeringan`,
+    technologies: ["Kotlin", "Firebase", "Android-studio"],
     liveUrl: "https://google.com",
-    githubUrl: "https://github.com"
+    githubUrl: "https://github.com/ruly13/heatwafe_v1.1",
   },
   {
     id: 2,
-    image: '/images/portfolio/humans.png',
-    alt: 'Proyek 2',
-    title: 'Dasbor Media Sosial',
-    slug: 'social-media-dashboard',
-    info: 'Dasbor analitik untuk melacak kinerja media sosial.',
+    image: "/images/portfolio/guestbook-pro.svg",
+    alt: "Proyek 2",
+    title: "Buku Tamu Digital",
+    slug: "digital-event-guestbook",
+    info: "Sebuah sistem pencatatan tamu undangan hajatan untuk mempermudah pencatatan.",
     description: `
       ## Ikhtisar
       Dasbor terpusat untuk manajer media sosial untuk melacak metrik kinerja utama di berbagai platform.
@@ -112,15 +93,15 @@ export const portfolioDataId: PortfolioItem[] = [
     `,
     technologies: ["React", "Redux", "Recharts", "Node.js"],
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/ruly13/guestbook-management-V1",
   },
   {
     id: 3,
-    image: '/images/portfolio/roket-squred.png',
-    alt: 'Proyek 3',
-    title: 'Aplikasi Manajemen Tugas',
-    slug: 'task-management-app',
-    info: 'Alat produktivitas bagi tim untuk mengelola tugas dan proyek.',
+    image: "/images/portfolio/roket-squred.png",
+    alt: "Proyek 3",
+    title: "Aplikasi Manajemen Tugas",
+    slug: "task-management-app",
+    info: "Alat produktivitas bagi tim untuk mengelola tugas dan proyek.",
     description: `
       ## Ikhtisar
       Alat manajemen tugas kolaboratif yang terinspirasi oleh Trello dan Asana, dirancang untuk meningkatkan produktivitas tim.
@@ -132,6 +113,6 @@ export const portfolioDataId: PortfolioItem[] = [
     `,
     technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
     liveUrl: "#",
-    githubUrl: "#"
-  }
+    githubUrl: "#",
+  },
 ];
