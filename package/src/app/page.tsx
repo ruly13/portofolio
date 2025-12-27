@@ -10,7 +10,7 @@ const Portfolio = dynamic(() => import('@/components/SharedComponent/portfollio'
 const Certificates = dynamic(() => import('@/components/Home/Certificates'));
 
 export const metadata: Metadata = {
-  title: "Rohmat Choiruly Anwar | Full Stack Developer",
+  title: "Rohmat Choiruly Anwar | Frontend Developer",
   description: "Professional portfolio and CV of Rohmat Choiruly Anwar, a Full Stack Developer specializing in React, Next.js, and modern web technologies.",
 };
 

@@ -1,19 +1,11 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Logo: React.FC = () => {
-
     return (
-        <Link href="/">
-            <Image
-                src="/images/logo/logo.svg"
-                alt="logo"
-                width={160}
-                height={50}
-                style={{ width: 'auto', height: 'auto' }}
-                quality={100}
-                className='logo'
-            />
+        <Link href="/" className="block group">
+            <h1 className="text-lg md:text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Rohmat <span className="text-blue-600 dark:text-blue-400">Choiruly Anwar</span>
+            </h1>
         </Link>
     );
 };

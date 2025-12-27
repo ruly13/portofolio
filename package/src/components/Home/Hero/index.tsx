@@ -20,16 +20,24 @@ const Hero = () => {
           
           {/* Text Content */}
           <div className='flex-1 text-center lg:text-left space-y-6'>
-            <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light font-medium text-sm mb-2">
+            {/* Status Badge with Pulsing Dot */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800 text-blue-700 dark:text-blue-300 font-medium text-sm mb-4 backdrop-blur-sm shadow-sm">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+              </span>
               {resumeData.labels.hero.status}
             </div>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-midnight-text dark:text-white tracking-tight'>
-              {resumeData.hero.name}
+
+            <h1 className='text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-4'>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600 dark:from-white dark:via-slate-200 dark:to-slate-400">
+                {resumeData.hero.name}
+              </span>
             </h1>
             <h2 className='text-2xl md:text-3xl text-secondary dark:text-slate-400 font-medium'>
               {resumeData.hero.title}
             </h2>
-            <p className='text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0'>
+            <p className='text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-justify'>
               {resumeData.hero.description}
             </p>
             
