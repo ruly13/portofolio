@@ -102,7 +102,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{resumeData.labels.hero.experience}</p>
-                  <p className="text-lg font-bold text-slate-900 dark:text-white">5+ {resumeData.labels.hero.years}</p>
+                  <p className="text-lg font-bold text-slate-900 dark:text-white">&lt; 1 {resumeData.labels.hero.years}</p>
                 </div>
               </div>
             </div>

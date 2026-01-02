@@ -95,9 +95,9 @@ const TopBar = () => {
                                     transition={{ duration: 0.2 }}
                                 >
                                     {theme === 'dark' ? (
-                                        <Icon icon="heroicons:sun" width="20" />
+                                        <Icon icon="ph:sun-bold" width="20" />
                                     ) : (
-                                        <Icon icon="heroicons:moon" width="20" />
+                                        <Icon icon="ph:moon-bold" width="20" />
                                     )}
                                 </motion.div>
                             </AnimatePresence>
