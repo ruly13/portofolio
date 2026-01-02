@@ -90,6 +90,7 @@ const Hero = () => {
                   src={imageUrl}
                   alt={resumeData.hero.name}
                   fill
+                  sizes="(max-width: 768px) 288px, 384px"
                   className='object-cover'
                   priority
                 />

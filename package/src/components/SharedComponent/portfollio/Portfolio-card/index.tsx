@@ -27,6 +27,7 @@ const PortfolioCard = ({ data }: { data?: PortfolioItem[] }) => {
                   alt={item.alt}
                   width={600}
                   height={400}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500'
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
