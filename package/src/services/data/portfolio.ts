@@ -95,24 +95,4 @@ kegagalan pengeringan`,
     liveUrl: "#",
     githubUrl: "https://github.com/ruly13/guestbook-management-V1",
   },
-  {
-    id: 3,
-    image: "/images/portfolio/roket-squred.png",
-    alt: "Proyek 3",
-    title: "Aplikasi Manajemen Tugas",
-    slug: "task-management-app",
-    info: "Alat produktivitas bagi tim untuk mengelola tugas dan proyek.",
-    description: `
-      ## Ikhtisar
-      Alat manajemen tugas kolaboratif yang terinspirasi oleh Trello dan Asana, dirancang untuk meningkatkan produktivitas tim.
-
-      ## Fitur Utama
-      - **Antarmuka Drag & Drop**: Papan Kanban intuitif untuk manajemen tugas.
-      - **Kolaborasi Waktu Nyata**: Pembaruan langsung menggunakan WebSockets.
-      - **Manajemen Tim**: Kontrol akses berbasis peran dan ruang kerja tim.
-    `,
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
 ];
