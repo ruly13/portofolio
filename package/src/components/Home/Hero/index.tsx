@@ -4,14 +4,14 @@ import React from 'react'
 import Image from 'next/image'
 import { useResumeData } from '@/hooks/useResumeData'
 import { Icon } from '@iconify/react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 const Hero = () => {
   const resumeData = useResumeData();
   const imageUrl = resumeData.hero.image;
 
   // Animation Variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
@@ -22,7 +22,7 @@ const Hero = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
@@ -31,7 +31,7 @@ const Hero = () => {
     }
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8, rotate: -10 },
     visible: { 
       opacity: 1, 
