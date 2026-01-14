@@ -15,7 +15,12 @@ const PortfolioCard = ({ data }: { data?: PortfolioItem[] }) => {
     <div id='portfolio'>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {portfolioItems.map((item, index) => (
-          <div key={index} className='group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-card dark:shadow-none border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300 flex flex-col'>
+          <div 
+            key={index} 
+            className='group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-card dark:shadow-none border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300 flex flex-col'
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
             
             {/* Image Container */}
             <div className='relative overflow-hidden aspect-video'>

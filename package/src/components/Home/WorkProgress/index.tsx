@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Skills } from '@/app/api/data'
 import { Icon } from '@iconify/react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const getLevelBadge = (level: string) => {
   switch (level) {
@@ -52,17 +53,25 @@ const WorkProgress = ({ isColorMode }: { isColorMode?: Boolean }) => {
         </div>
 
         {/* Tab Content */}
-        <div className="max-w-6xl mx-auto min-h-[400px]">
-          {Skills.map((category, catIndex) => (
-            <div 
-              key={catIndex} 
-              className={`transition-all duration-500 ease-in-out ${
-                activeTab === catIndex ? 'opacity-100 translate-y-0 relative z-10' : 'opacity-0 translate-y-4 absolute top-0 left-0 right-0 -z-10 hidden'
-              }`}
+        {/* Tab Content */}
+        <div className="max-w-6xl mx-auto min-h-0">
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={activeTab} 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.data.map((group, groupIndex) => (
-                  <div key={groupIndex} className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-shadow duration-300 h-full">
+                {Skills[activeTab].data.map((group, groupIndex) => (
+                  <motion.div 
+                    key={groupIndex} 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: groupIndex * 0.1 }}
+                    className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-shadow duration-300 h-full"
+                  >
                     <h3 className="text-lg font-bold text-midnight-text dark:text-white mb-6 flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
                       <span className="w-8 h-1 bg-primary rounded-full"></span>
                       {group.title}
@@ -88,11 +97,11 @@ const WorkProgress = ({ isColorMode }: { isColorMode?: Boolean }) => {
                           </div>
                       )})}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
-          ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
 
       </div>
