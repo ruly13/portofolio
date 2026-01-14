@@ -35,7 +35,7 @@ export interface PortfolioItem {
   description: string;
   technologies: string[];
   liveUrl: string;
-  githubUrl: string;
+  githubUrl?: string; // Optional - user can omit if source code is private
 }
 
 // Certificates share the same structure as Portfolio items in the current implementation

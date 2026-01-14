@@ -36,23 +36,24 @@ export const portfolioDataEn: PortfolioItem[] = [
   },
   {
     id: 3,
-    image: "/images/portfolio/roket-squred.png",
+    image: "/images/portfolio/filmhunt.png",
     alt: "Project 3",
-    title: "Task Management App",
-    slug: "task-management-app",
-    info: "Productivity tool for teams to manage tasks and projects.",
+    title: "FilmHunt",
+    slug: "filmhunt",
+    info: "A dynamic movie discovery and review platform.",
     description: `
       ## Overview
-      A collaborative task management tool inspired by Trello and Asana, designed to improve team productivity.
+      FilmHunt is a comprehensive movie and TV show discovery application powered by the TMDB API. It allows users to explore trending content, view detailed information including trailers and cast, and search for their favorite entertainment.
 
       ## Key Features
-      - **Drag & Drop Interface**: Intuitive Kanban board for task management.
-      - **Real-time Collaboration**: Live updates using WebSockets.
-      - **Team Management**: Role-based access control and team workspaces.
+      - **Content Discovery**: Browse popular, top-rated, and upcoming movies and TV shows.
+      - **Detailed Insights**: Access comprehensive data including plot summaries, cast & crew, and video trailers.
+      - **Smart Search**: Efficiently find content with a robust search functionality.
+      - **Responsive Experience**: Optimized for seamless viewing on desktops, tablets, and mobile devices.
     `,
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "#",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "TMDB API"],
+    liveUrl: "https://www.filmhunt.site/",
+    // githubUrl: "https://github.com/ruly13/filmhunt", // Hidden for privacy
   },
 ];
 
@@ -94,5 +95,26 @@ kegagalan pengeringan`,
     technologies: ["React", "Redux", "Recharts", "Node.js"],
     liveUrl: "#",
     githubUrl: "https://github.com/ruly13/guestbook-management-V1",
+  },
+  {
+    id: 3,
+    image: "/images/portfolio/filmhunt.png",
+    alt: "Proyek 3",
+    title: "FilmHunt",
+    slug: "filmhunt",
+    info: "Platform penemuan dan ulasan film yang dinamis.",
+    description: `
+      ## Ikhtisar
+      FilmHunt adalah aplikasi penemuan film dan acara TV komprehensif yang didukung oleh TMDB API. Aplikasi ini memungkinkan pengguna untuk menjelajahi konten yang sedang tren, melihat informasi rinci termasuk trailer dan pemeran, serta mencari hiburan favorit mereka.
+
+      ## Fitur Utama
+      - **Penemuan Konten**: Jelajahi film dan acara TV populer, berperingkat tinggi, dan yang akan datang.
+      - **Wawasan Rinci**: Akses data lengkap termasuk ringkasan plot, pemeran & kru, dan trailer video.
+      - **Pencarian Cerdas**: Temukan konten dengan efisien menggunakan fitur pencarian yang tangguh.
+      - **Pengalaman Responsif**: Dioptimalkan untuk tampilan yang mulus di desktop, tablet, dan perangkat seluler.
+    `,
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "TMDB API"],
+    liveUrl: "https://www.filmhunt.site/",
+    // githubUrl: "https://github.com/ruly13/filmhunt", // Hidden for privacy
   },
 ];
