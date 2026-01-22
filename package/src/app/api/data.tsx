@@ -26,8 +26,8 @@ export const Skills = [
           { name: "PHP", icon: "logos:php", level: "Basic" },
           { name: "Python", icon: "logos:python", level: "Basic" },
           { name: "JavaScript", icon: "logos:javascript", level: "Intermediate" },
-          { name: "HTML", icon: "logos:html-5", level: "Advanced" },
-          { name: "CSS", icon: "logos:css-3", level: "Advanced" },
+          { name: "HTML", icon: "logos:html-5", level: "Intermediate" },
+          { name: "CSS", icon: "logos:css-3", level: "Intermediate" },
           { name: "TypeScript", icon: "logos:typescript-icon", level: "Basic" },
           { name: "Kotlin", icon: "logos:kotlin-icon", level: "Basic" },
         ]
@@ -55,7 +55,7 @@ export const Skills = [
         skills: [
           { name: "Git", icon: "logos:git-icon", level: "Intermediate" },
           { name: "GitHub", icon: "logos:github-icon", level: "Intermediate" },
-          { name: "VS Code (+AI)", icon: "logos:visual-studio-code", level: "Advanced" },
+          { name: "VS Code (+AI)", icon: "logos:visual-studio-code", level: "Intermediate" },
           { name: "Postman", icon: "logos:postman-icon", level: "Intermediate" },
            { name: "Turbo Monorepo", icon: "logos:turborepo-icon", level: "Basic" },
         ]
