@@ -1,28 +1,32 @@
-import React from 'react'
-import { Metadata } from "next";
-import Hero from '@/components/Home/Hero';
-import dynamic from 'next/dynamic';
-
-const Education = dynamic(() => import('@/components/Home/Education'));
-const WorkProgress = dynamic(() => import('@/components/Home/WorkProgress'));
-const Experience = dynamic(() => import('@/components/Home/Experience'));
-const Portfolio = dynamic(() => import('@/components/SharedComponent/portfollio'));
-const Certificates = dynamic(() => import('@/components/Home/Certificates'));
+import { Metadata } from 'next'
+import Navbar from '@/components/sections/Navbar'
+import HeroSection from '@/components/sections/HeroSection'
+import AboutSection from '@/components/sections/AboutSection'
+import ExperienceSection from '@/components/sections/ExperienceSection'
+import SkillsSection from '@/components/sections/SkillsSection'
+import PortfolioSection from '@/components/sections/PortfolioSection'
+import CertificatesSection from '@/components/sections/CertificatesSection'
+import EducationSection from '@/components/sections/EducationSection'
+import ContactFooter from '@/components/sections/ContactFooter'
 
 export const metadata: Metadata = {
-  title: "Rohmat Choiruly Anwar | Frontend Developer",
-  description: "Professional portfolio and CV of Rohmat Choiruly Anwar, a Full Stack Developer specializing in React, Next.js, and modern web technologies.",
-};
+  title: 'Rohmat Choiruly Anwar | Frontend Developer',
+  description:
+    'Building interfaces that live at the intersection of logic and aesthetics. Frontend Developer specializing in Next.js, React, and TypeScript.',
+}
 
 export default function Home() {
   return (
-    <main className="bg-slate-50 min-h-screen">
-      <Hero />
-      <Experience />
-      <WorkProgress isColorMode={false} />
-      <Education />
-      <Certificates />
-      <Portfolio />
+    <main className="bg-bg-darkest min-h-screen relative">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <ExperienceSection />
+      <SkillsSection />
+      <PortfolioSection />
+      <CertificatesSection />
+      <EducationSection />
+      <ContactFooter />
     </main>
   )
 }

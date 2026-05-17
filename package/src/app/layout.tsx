@@ -1,46 +1,45 @@
 import type { Metadata } from 'next'
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Aoscompo from "@/utils/aos";
-import NextTopLoader from 'nextjs-toploader';
-import TopBar from "@/components/TopBar";
-import Container from "@/components/SharedComponent/Container";
-import ToasterContext from './api/contex/ToasetContex'
-import DownloadPDF from "@/components/DownloadPDF";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { LanguageProvider } from "@/context/LanguageContext";
+import { Syne, JetBrains_Mono, Outfit } from "next/font/google"
+import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] });
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+})
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
-  title: 'Rohmat Choiruly Anwar | Full Stack Developer',
-  description: 'Professional portfolio and CV of Rohmat Choiruly Anwar',
+  title: 'Rohmat Choiruly Anwar | Frontend Developer',
+  description: 'Building interfaces that live at the intersection of logic and aesthetics. Frontend Developer specializing in Next.js, React, and TypeScript.',
 }
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
-        <NextTopLoader />
-        <LanguageProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <Aoscompo>
-                <TopBar />
-                <Container>
-                  {children}
-                </Container>
-              </Aoscompo>
-              <ToasterContext />
-            <DownloadPDF />
-            <SpeedInsights />
-          </ThemeProvider>
-        </LanguageProvider>
+    <html
+      lang="en"
+      className={`${syne.variable} ${jetbrainsMono.variable} ${outfit.variable} bg-[#080C10]`}
+    >
+      <body className="bg-bg-darkest text-text-primary font-[var(--font-body)] antialiased">
+        {children}
+        <SpeedInsights />
       </body>
     </html>
-  );
+  )
 }
