@@ -21,7 +21,7 @@ export const experienceDataEn: ExperienceItem[] = [
     id: 3,
     role: "Founder & Full Stack Developer",
     company: "Karsaloka · Side Project / Indie",
-    period: "2025 - Present",
+    period: "2026 - Present",
     description:
       "Built and launched a SaaS platform for digital wedding invitations with features including real-time RSVP management, photo gallery, custom music, and multiple wedding themes. Developed using Next.js 15, Supabase, and TailwindCSS within an AI-assisted development workflow.",
   },
@@ -48,7 +48,7 @@ export const experienceDataId: ExperienceItem[] = [
     id: 3,
     role: "Founder & Full Stack Developer",
     company: "Karsaloka · Side Project / Indie",
-    period: "2025 - Sekarang",
+    period: "2026 - Sekarang",
     description:
       "Membangun dan meluncurkan platform SaaS untuk undangan pernikahan digital dengan fitur-fitur termasuk manajemen RSVP real-time, galeri foto, musik kustom, dan berbagai tema pernikahan. Dikembangkan menggunakan Next.js 15, Supabase, dan TailwindCSS dalam alur kerja pengembangan yang dibantu AI.",
   },
